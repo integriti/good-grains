@@ -1,26 +1,49 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { useSpring, animated } from 'react-spring';
+import { useSpring, animated } from "react-spring";
 
-const CollapseMenu = (props) => {
+const CollapseMenu = props => {
   const { open } = useSpring({ open: props.navbarState ? 0 : 1 });
 
   if (props.navbarState === true) {
     return (
-      <CollapseWrapper style={{
-        transform: open.interpolate({
-          range: [0, 0.2, 0.3, 1],
-          output: [0, -20, 0, -200],
-        }).interpolate(openValue => `translate3d(0, ${openValue}px, 0`),
-      }}
+      <CollapseWrapper
+        style={{
+          transform: open
+            .interpolate({
+              range: [0, 0.2, 0.3, 1],
+              output: [0, -20, 0, -200]
+            })
+            .interpolate(openValue => `translate3d(0, ${openValue}px, 0`)
+        }}
       >
         <NavLinks>
-          <li><a href="/" onClick={props.handleNavbar}>Home</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>About us</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>Our products</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>Cart (0)</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>Contact us</a></li>
+          <li>
+            <a href="/" onClick={props.handleNavbar}>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="/" onClick={props.handleNavbar}>
+              About us
+            </a>
+          </li>
+          <li>
+            <a href="/" onClick={props.handleNavbar}>
+              Our products
+            </a>
+          </li>
+          <li>
+            <a href="/" onClick={props.handleNavbar}>
+              Cart (0)
+            </a>
+          </li>
+          <li>
+            <a href="/" onClick={props.handleNavbar}>
+              Contact us
+            </a>
+          </li>
         </NavLinks>
       </CollapseWrapper>
     );

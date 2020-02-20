@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import styled from "styled-components";
 import { useSpring, animated, config } from "react-spring";
 
@@ -6,17 +6,17 @@ import Brand from "./Brand";
 import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
 
-const Navbar = (props) => {
+const Navbar = props => {
   const barAnimation = useSpring({
-    from: { transform: 'translate3d(0, -10rem, 0)' },
-    transform: 'translate3d(0, 0, 0)',
+    from: { transform: "translate3d(0, -10rem, 0)" },
+    transform: "translate3d(0, 0, 0)"
   });
 
   const linkAnimation = useSpring({
-    from: { transform: 'translate3d(0, 30px, 0)', opacity: 0 },
-    to: { transform: 'translate3d(0, 0, 0)', opacity: 1 },
+    from: { transform: "translate3d(0, 30px, 0)", opacity: 0 },
+    to: { transform: "translate3d(0, 0, 0)", opacity: 1 },
     delay: 800,
-    config: config.wobbly,
+    config: config.wobbly
   });
 
   return (
@@ -33,21 +33,21 @@ const Navbar = (props) => {
           </NavLinks>
           <BurgerWrapper>
             <BurgerMenu
-              navbarState={props.navbarState} 
+              navbarState={props.navbarState}
               handleNavbar={props.handleNavbar}
             />
           </BurgerWrapper>
         </FlexContainer>
       </NavBar>
-      <CollapseMenu 
-        navbarState={props.navbarState} 
+      <CollapseMenu
+        navbarState={props.navbarState}
         handleNavbar={props.handleNavbar}
       />
-   </>
-  )
-}
+    </>
+  );
+};
 
-export default Navbar
+export default Navbar;
 
 const NavBar = styled(animated.nav)`
   position: fixed;
@@ -63,7 +63,7 @@ const FlexContainer = styled.div`
   max-width: 120rem;
   display: flex;
   margin: auto;
-  padding: 0 2rem;;
+  padding: 0 2rem;
   justify-content: space-between;
   height: 5rem;
 `;
