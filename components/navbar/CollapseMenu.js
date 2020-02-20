@@ -16,10 +16,11 @@ const CollapseMenu = (props) => {
       }}
       >
         <NavLinks>
-          <li><a href="/" onClick={props.handleNavbar}>link n1</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>link n2</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>link n3</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>link n4</a></li>
+          <li><a href="/" onClick={props.handleNavbar}>Home</a></li>
+          <li><a href="/" onClick={props.handleNavbar}>About us</a></li>
+          <li><a href="/" onClick={props.handleNavbar}>Our products</a></li>
+          <li><a href="/" onClick={props.handleNavbar}>Cart (0)</a></li>
+          <li><a href="/" onClick={props.handleNavbar}>Contact us</a></li>
         </NavLinks>
       </CollapseWrapper>
     );
@@ -54,8 +55,8 @@ const NavLinks = styled.ul`
     cursor: pointer;
 
     &:hover {
-      color: #fdcb6e;
-      border-bottom: 1px solid #fdcb6e;
+      color: #feaf4f;
+      border-bottom: 1px solid #feaf4f;
     }
   }
 `;
