@@ -1,29 +1,6 @@
-import React, { Component } from 'react'
-import Navbar from "./components/navbar/Navbar";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import GlobalStyle from './styles/Global';
+import App from './App';
 
-class App extends Component {
-  state = {
-    navbarOpen: false
-  }
-
-  handleNavbar = () => {
-    this.setState({ navbarOpen: !this.state.navbarOpen });
-  }
-
-  render() {
-
-    return (
-      <>
-        <Navbar 
-          navbarState={this.state.navbarOpen} 
-          handleNavbar={this.handleNavbar}
-        />
-        <GlobalStyle />
-      </>
-    )
-  }
-}
-
-export default App
+ReactDOM.render(<App />, document.getElementById('root'));

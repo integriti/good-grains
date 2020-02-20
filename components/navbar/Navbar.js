@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 import { useSpring, animated, config } from "react-spring";
 
-//import Brand from "./Brand";
+import Brand from "./Brand";
 import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
 
@@ -23,7 +23,7 @@ const Navbar = (props) => {
     <>
       <NavBar style={barAnimation}>
         <FlexContainer>
-          //<Brand />
+          <Brand />
           <NavLinks style={linkAnimation}>
             <a href="/">link n1</a>
             <a href="/">link n2</a>
