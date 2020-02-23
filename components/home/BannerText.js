@@ -5,7 +5,8 @@ const BannerText = () => {
   return (
     <WhiteBox>
       <div>
-        <h1>Dieter's Choice™</h1><br />
+        <h1>Dieter's Choice™</h1>
+        <br />
         <h2>Losing weight begins with good nutrition</h2>
       </div>
     </WhiteBox>
@@ -31,10 +32,15 @@ const WhiteBox = styled.div`
   -o-border-radius: 5px;
   border-radius: 5px;
 
-  font-size: 1.5vw;
+  font-size: 28px;
+  max-width: 100rem;
 
   @media (max-width: 768px) {
-      font-size: 2.5vw;
-      width: 70%;
-    }
+    font-size: 2.5vw;
+    width: 70%;
+  }
+
+  @media (min-width: 1200px) {
+    
+  }
 `;
