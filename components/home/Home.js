@@ -1,15 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 
-import BannerText from "./BannerText";
 import TopBanner from "./TopBanner";
 
 const Home = props => {
   return (
     <>
-      <TopBanner />
+      <Container>
+        <TopBanner />
+      </Container>
     </>
   );
 };
 
 export default Home;
+
+const Container = styled.div`
+  margin-left: 100;
+`;
