@@ -6,15 +6,9 @@ import TopBanner from "./TopBanner";
 const Home = props => {
   return (
     <>
-      <Container>
-        <TopBanner />
-      </Container>
+      <TopBanner />
     </>
   );
 };
 
 export default Home;
-
-const Container = styled.div`
-  margin-left: 100;
-`;
