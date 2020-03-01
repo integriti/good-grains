@@ -1,15 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
+import BlurbComponent from "./BlurbComponent";
+
 const MilletsPicker = () => {
   return (
     <>
       <Container>
         <Gradient>
-        <BlurbComponent>
-          <Image src="https://i.imgur.com/0AvttTd.png" alt="Arrow" />;
-          <h1>The perfect rice replacement</h1>
-        </BlurbComponent>
+        <BlurbComponent />
         </Gradient>
         <WideDisplay>
           <Image src="https://i.imgur.com/iA71mhT.png" alt="Foxtail" />;
@@ -48,11 +47,6 @@ const Gradient = styled.div`
   transform: translate(0%, -50%);
   width: 100%;
   height: 50%;
-`;
-
-const BlurbComponent = styled.div`
-  position: relative;
-  float: left;
 `;
 
 const WideDisplay = styled.div`
