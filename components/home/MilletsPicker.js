@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import BlurbComponent from "./BlurbComponent";
+import Carousel from "./Carousel";
 
 const MilletsPicker = () => {
   return (
@@ -11,10 +12,12 @@ const MilletsPicker = () => {
         <WideDisplay>
           <Image src="https://i.imgur.com/iA71mhT.png" alt="Foxtail" />;
           <Image src="https://i.imgur.com/5ZX6Ae3.png" alt="Kodo" />;
+          <Image src="https://i.imgur.com/iA71mhT.png" alt="Foxtail" />;
         </WideDisplay>
         <NarrowDisplay>
-          <Image src="https://i.imgur.com/iA71mhT.png" alt="Foxtail" />;
-          <Image src="https://i.imgur.com/5ZX6Ae3.png" alt="Kodo" />;
+          <RightCarousel>
+            <Carousel />
+          </RightCarousel>
         </NarrowDisplay>
       </Container>
     </>
@@ -26,7 +29,7 @@ export default MilletsPicker;
 const Container = styled.div`
   position: relative;
   text-align: center;
-  height: 400px;
+  height: 30em;
   max-width: 120rem;
   margin: auto;
 `;
@@ -59,10 +62,21 @@ const NarrowDisplay = styled.div`
   }
 `;
 
+const RightCarousel = styled.div`
+  position: absolute;
+  float: right;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0%, -50%);
+
+  width: 50%;
+`;
+
 const Image = styled.img`
   position: relative;
   float: right;
   margin: auto 0;
-  height: 350px;
+  max-height: 30em;
   z-index: 9;
 `;
