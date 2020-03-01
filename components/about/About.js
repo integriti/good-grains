@@ -22,6 +22,10 @@ const About = props => {
       </Creations>
       <CreationsContainer>
         <FloatingBox text="FloatingBoxOne" />
+        <FloatingBox text="FloatingBoxTwo" />
+        <FloatingBox text="FloatingBoxThree" />
+        <FloatingBox text="FloatingBoxFour" />
+        <FloatingBox text="FloatingBoxFive" />
       </CreationsContainer>
     </>
   );
@@ -39,12 +43,19 @@ const AboutContainer = styled.div`
 `;
 
 const CreationsContainer = styled.div`
-  display: flex;
-  width: 100%;
+  position: relative;
   margin: auto;
+  display: block;
+  width: 100%;
+  height: 867px;
   background-image: url("https://i.imgur.com/qkWxSlB.jpg");
+  background-size: cover;
   max-width: 120rem;
   text-align: center;
+
+  @media (max-width: 768px) {
+    height: 440px;
+  }
 `;
 
 const WhiteBackground = styled.div`

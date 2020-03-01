@@ -18,8 +18,6 @@ const InfoPage = props => {
     <>
       <BackgroundContainer>
         {(function() {
-          console.log(props.text);
-          console.log(AboutTextOne);
           switch (props.text) {
             case "AboutTextOne":
               return (
