@@ -4,26 +4,27 @@ import styled from "styled-components";
 import "../../styles/carousel.css";
 
 const Carousel = props => {
+  var products = [];
+  switch (props.type) {
+    case "millets":
+      products = millets;
+      break;
+    case "shakes":
+      products = shakes;
+      break;
+  }
+  var idBase = "#carousel__" + props.type;
+
   return (
     <section class="carousel" aria-label="Gallery">
       <ol class="carousel__viewport">
         {(function() {
-          var products = [];
-          switch (props.type) {
-            case "millets":
-              products = millets;
-              break;
-            case "shakes":
-              products = shakes;
-              break;
-          }
-
           var list = [];
           for (var i = 0; i < products.length; i++) {
-            var href = "#carousel__slide" + (i + 1);
+            var id = idBase + (i + 1);
             list.push(
-              <li id="carousel__slide1" tabindex="0" class="carousel__slide">
-                <Image src={millets[i]} alt="Foxtail" />;
+              <li id={id} tabindex="0" class="carousel__slide">
+                <Image src={products[i]} />;
                 <div class="carousel__snapper" />
               </li>
             );
@@ -34,26 +35,16 @@ const Carousel = props => {
       <aside class="carousel__navigation">
         <ol class="carousel__navigation-list">
           {(function() {
-            var products = [];
-            switch (props.type) {
-              case "millets":
-              products = millets;
-              break;
-            case "shakes":
-              products = shakes;
-              break;
-            }
-
             var list = [];
-                for (var i = 0; i < products.length; i++) {
-                  var href = "#carousel__slide" + (i + 1);
-                  list.push(
-                    <li class="carousel__navigation-item">
-                      <a href={href} class="carousel__navigation-button" />
-                    </li>
-                  );
-                }
-                return list;
+            for (var i = 0; i < products.length; i++) {
+              var href = idBase + (i + 1);
+              list.push(
+                <li class="carousel__navigation-item">
+                  <a href={href} class="carousel__navigation-button" />
+                </li>
+              );
+            }
+            return list;
           })()}
         </ol>
       </aside>

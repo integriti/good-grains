@@ -1,30 +1,32 @@
 import React from "react";
 import styled from "styled-components";
 
-import BlurbComponent from "./BlurbComponent";
+import PickerText from "./PickerText";
 import Carousel from "./Carousel";
 
 const HomePicker = props => {
+  var products = [];
+  switch (props.type) {
+    case "millets":
+      products = millets;
+      break;
+    case "shakes":
+      products = shakes;
+      break;
+  }
+
   return (
     <>
       <Container>
         <Gradient />
+        <PickerText type={props.type} />
         <WideDisplay>
           {(function() {
-            switch (props.type) {
-              case "millets":
-                var products = [];
-                for (var i = 0; i < millets.length; i++) {
-                  products.push(<Image src={millets[i]} />);
-                }
-                return products;
-              case "shakes":
-                var products = [];
-                for (var i = 0; i < shakes.length; i++) {
-                  products.push(<Image src={shakes[i]} />);
-                }
-                return products;
+            var list = [];
+            for (var i = 0; i < products.length; i++) {
+              list.push(<Image src={products[i]} />);
             }
+            return list;
           })()}
         </WideDisplay>
         <NarrowDisplay>
@@ -90,6 +92,8 @@ const Gradient = styled.div`
 `;
 
 const WideDisplay = styled.div`
+  position: relative;
+
   @media (max-width: 768px) {
     display: none;
   }
