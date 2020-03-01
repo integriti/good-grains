@@ -15,4 +15,5 @@ const FooterContainer = styled.div`
   margin: auto;
   padding: 1em;
   height: 1em;
+  max-width: 120rem;
 `;
