@@ -26,7 +26,7 @@ const Navbar = props => {
           <Brand />
           <NavLinks style={linkAnimation}>
             <a href="/">Home</a>
-            <a href="/">About us</a>
+            <a href="/about">About us</a>
             <a href="/">Our products</a>
             <a href="/">Cart (0)</a>
             <a href="/">Contact us</a>
