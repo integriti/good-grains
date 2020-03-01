@@ -134,5 +134,4 @@ const Image = styled.img`
   position: relative;
   margin: auto 0;
   height: 20em;
-  z-index: 9;
 `;

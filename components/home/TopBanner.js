@@ -25,6 +25,5 @@ const Container = styled.div`
 
 const Image = styled.img`
   margin: auto 0;
-  width: 120rem;
-  overflow:hidden;
+  max-width: 120rem;
 `;

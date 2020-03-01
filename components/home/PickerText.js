@@ -53,7 +53,7 @@ const BlurbLeft = styled.div`
 
   @media (max-width: 768px) {
     width: 50%;
-    font-size: 8pt;
+    font-size: 7pt;
   }
 `;
 
@@ -65,7 +65,7 @@ const BlurbRight = styled.div`
   float: right;
 
   @media (max-width: 768px) {
-    font-size: 8pt;
+    font-size: 7pt;
   }
 `;
 
