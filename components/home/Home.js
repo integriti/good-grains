@@ -2,14 +2,16 @@ import React from "react";
 import styled from "styled-components";
 
 import TopBanner from "./TopBanner";
-import MilletsPicker from "./MilletsPicker";
+import HomePicker from "./HomePicker";
 
 const Home = props => {
   return (
     <>
       <HomeContainer>
         <TopBanner />
-        <MilletsPicker />
+        <HomePicker type="millets" orientation="right" />
+        <HomePicker type="millets" orientation="left" />
+        <HomePicker type="millets" orientation="right" />
       </HomeContainer>
     </>
   );

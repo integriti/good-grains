@@ -4,7 +4,7 @@ import styled from "styled-components";
 import BlurbComponent from "./BlurbComponent";
 import Carousel from "./Carousel";
 
-const MilletsPicker = () => {
+const HomePicker = props => {
   return (
     <>
       <Container>
@@ -12,19 +12,43 @@ const MilletsPicker = () => {
         <WideDisplay>
           <Image src="https://i.imgur.com/iA71mhT.png" alt="Foxtail" />;
           <Image src="https://i.imgur.com/5ZX6Ae3.png" alt="Kodo" />;
-          <Image src="https://i.imgur.com/iA71mhT.png" alt="Foxtail" />;
+          <Image src="https://i.imgur.com/BeWWn3S.png" alt="Foxtail" />;
         </WideDisplay>
         <NarrowDisplay>
-          <RightCarousel>
-            <Carousel />
-          </RightCarousel>
+          {(function() {
+            switch (props.orientation) {
+              case "left":
+                return (
+                  <>
+                    <LeftCarousel>
+                      <Carousel type={props.type} />
+                    </LeftCarousel>
+                  </>
+                );
+              case "right":
+                return (
+                  <>
+                    <RightCarousel>
+                      <Carousel type={props.type} />
+                    </RightCarousel>
+                  </>
+                );
+            }
+          })()}
         </NarrowDisplay>
       </Container>
     </>
   );
 };
 
-export default MilletsPicker;
+export default HomePicker;
+
+const millets = [
+  "https://i.imgur.com/iA71mhT.png",
+  "https://i.imgur.com/iA71mhT.png",
+  "https://i.imgur.com/iA71mhT.png",
+  "https://i.imgur.com/BeWWn3S.png"
+];
 
 const Container = styled.div`
   position: relative;
@@ -64,12 +88,17 @@ const NarrowDisplay = styled.div`
 
 const RightCarousel = styled.div`
   position: absolute;
-  float: right;
-  position: absolute;
   top: 50%;
   right: 0;
   transform: translate(0%, -50%);
+  width: 50%;
+`;
 
+const LeftCarousel = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
   width: 50%;
 `;
 
