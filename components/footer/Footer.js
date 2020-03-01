@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Footer = () => {
   return (
     <>
-      <FooterContainer>THANKS!</FooterContainer>
+      <FooterContainer>© Johann Agcanas 2020</FooterContainer>
     </>
   );
 };
@@ -12,7 +12,6 @@ const Footer = () => {
 export default Footer;
 
 const FooterContainer = styled.div`
-  text-align: center;
   margin: auto;
   padding: 1em;
   height: 1em;

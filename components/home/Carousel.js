@@ -55,6 +55,15 @@ const Carousel = props => {
 
 export default Carousel;
 
+const millets = [
+  "https://i.imgur.com/iA71mhT.png",
+  "https://i.imgur.com/5ZX6Ae3.png",
+  "https://i.imgur.com/OPRfLW7.png",
+  "https://i.imgur.com/BeWWn3S.png"
+];
+
+const shakes = ["https://i.imgur.com/2DrXYhk.png"];
+
 const Image = styled.img`
   height: 25em;
   z-index: 9;

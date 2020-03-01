@@ -10,8 +10,8 @@ const Home = props => {
       <HomeContainer>
         <TopBanner />
         <HomePicker type="millets" orientation="right" />
-        <HomePicker type="millets" orientation="left" />
-        <HomePicker type="millets" orientation="right" />
+        <HomePicker type="shakes" orientation="left" />
+        <HomePicker type="bites" orientation="right" />
       </HomeContainer>
     </>
   );

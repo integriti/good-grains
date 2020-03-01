@@ -10,9 +10,22 @@ const HomePicker = props => {
       <Container>
         <Gradient />
         <WideDisplay>
-          <Image src="https://i.imgur.com/iA71mhT.png" alt="Foxtail" />;
-          <Image src="https://i.imgur.com/5ZX6Ae3.png" alt="Kodo" />;
-          <Image src="https://i.imgur.com/BeWWn3S.png" alt="Foxtail" />;
+          {(function() {
+            switch (props.type) {
+              case "millets":
+                var products = [];
+                for (var i = 0; i < millets.length; i++) {
+                  products.push(<Image src={millets[i]} />);
+                }
+                return products;
+              case "shakes":
+                var products = [];
+                for (var i = 0; i < shakes.length; i++) {
+                  products.push(<Image src={shakes[i]} />);
+                }
+                return products;
+            }
+          })()}
         </WideDisplay>
         <NarrowDisplay>
           {(function() {
@@ -45,10 +58,12 @@ export default HomePicker;
 
 const millets = [
   "https://i.imgur.com/iA71mhT.png",
-  "https://i.imgur.com/iA71mhT.png",
-  "https://i.imgur.com/iA71mhT.png",
+  "https://i.imgur.com/5ZX6Ae3.png",
+  "https://i.imgur.com/OPRfLW7.png",
   "https://i.imgur.com/BeWWn3S.png"
 ];
+
+const shakes = ["https://i.imgur.com/2DrXYhk.png"];
 
 const Container = styled.div`
   position: relative;
@@ -104,7 +119,6 @@ const LeftCarousel = styled.div`
 
 const Image = styled.img`
   position: relative;
-  float: right;
   margin: auto 0;
   max-height: 30em;
   z-index: 9;
