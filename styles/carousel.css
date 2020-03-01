@@ -74,6 +74,7 @@ ol, li {
 
 .carousel {
   position: relative;
+  text-align: center;
   height: 26em;
   filter: drop-shadow(0 0 10px #0003);
   perspective: 100px;

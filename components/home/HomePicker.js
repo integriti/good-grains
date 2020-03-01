@@ -15,11 +15,27 @@ const HomePicker = props => {
       break;
   }
 
+  const setOrientation = () => {
+    return styled.div`
+      position: relative;
+      display: block;
+      width: 70%;
+      text-align: center;
+      float: ${props.orientation === "left" ? "left" : "right"};
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    `;
+  };
+
+  const WideDisplay = setOrientation(this.props);
+
   return (
     <>
       <Container>
         <Gradient />
-        <PickerText type={props.type} />
+        <PickerText type={props.type} orientation={props.orientation} />
         <WideDisplay>
           {(function() {
             var list = [];
@@ -69,7 +85,6 @@ const shakes = ["https://i.imgur.com/2DrXYhk.png"];
 
 const Container = styled.div`
   position: relative;
-  text-align: center;
   height: 30em;
   max-width: 120rem;
   margin: auto;
@@ -89,14 +104,8 @@ const Gradient = styled.div`
   transform: translate(0%, -50%);
   width: 100%;
   height: 50%;
-`;
 
-const WideDisplay = styled.div`
-  position: relative;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
+  z-index: 0;
 `;
 
 const NarrowDisplay = styled.div`
@@ -124,6 +133,6 @@ const LeftCarousel = styled.div`
 const Image = styled.img`
   position: relative;
   margin: auto 0;
-  max-height: 30em;
+  height: 20em;
   z-index: 9;
 `;

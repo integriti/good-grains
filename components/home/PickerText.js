@@ -10,13 +10,32 @@ const PickerText = props => {
     case "shakes":
       blurb = shakes;
       break;
+    case "bites":
+      blurb = bites;
+      break;
   }
 
-  return (
-    <BlurbContainer>
-      <h1>{blurb}</h1>
-    </BlurbContainer>
-  );
+  var render = [];
+  switch (props.orientation) {
+    case "right":
+      render.push(
+        <BlurbLeft>
+          <Image src="https://i.imgur.com/0AvttTd.png" />
+          <h1>{blurb}</h1>
+        </BlurbLeft>
+      );
+      break;
+    case "left":
+      render.push(
+        <BlurbRight>
+          <Image src="https://i.imgur.com/D6Ubbrd.png" />
+          <h1>{blurb}</h1>
+        </BlurbRight>
+      );
+      break;
+  }
+
+  return render;
 };
 
 export default PickerText;
@@ -25,6 +44,32 @@ const millets = "The perfect rice replacement";
 const shakes = "Shake off the extra kilos!";
 const bites = "Flaky bites";
 
-const BlurbContainer = styled.div`
+const BlurbLeft = styled.div`
   position: relative;
+  display: block;
+  width: 30%;
+  text-align: center;
+  float: left;
+
+  @media (max-width: 768px) {
+    width: 50%;
+    font-size: 8pt;
+  }
+`;
+
+const BlurbRight = styled.div`
+  position: relative;
+  display: block;
+  width: 30%;
+  text-align: center;
+  float: right;
+
+  @media (max-width: 768px) {
+    font-size: 8pt;
+  }
+`;
+
+const Image = styled.img`
+  margin-top: 80px;
+  height: 80px;
 `;
