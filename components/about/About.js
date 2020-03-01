@@ -7,16 +7,17 @@ import FloatingBox from "./FloatingBox";
 const About = props => {
   return (
     <>
-      <AboutContainer>
+    <AboutContainer>
+      <AboutBox>
         <InfoPage columns="two" bg="https://i.imgur.com/XV8012V.jpg" />
         <InfoPage columns="two" layout="WhiteText" text="AboutTextOne" />
-      </AboutContainer>
+      </AboutBox>
       <WhiteBackground>
         <h1>It's an open secret...</h1>
       </WhiteBackground>
-      <AboutContainer>
+      <AboutBox>
         <InfoPage columns="one" bg="https://i.imgur.com/ERutevI.png" layout="WhiteBox" text="AboutTextTwo" />
-      </AboutContainer>
+      </AboutBox>
       <Creations>
         <h1>Our creations to date...</h1>
       </Creations>
@@ -27,6 +28,7 @@ const About = props => {
         <FloatingBox text="FloatingBoxFour" />
         <FloatingBox text="FloatingBoxFive" />
       </CreationsContainer>
+      </AboutContainer>
     </>
   );
 };
@@ -34,10 +36,13 @@ const About = props => {
 export default About;
 
 const AboutContainer = styled.div`
+  background-image: url("https://i.imgur.com/JE1Jf2v.jpg");
+`;
+
+const AboutBox = styled.div`
   display: flex;
   width: 100%;
   margin: auto;
-  background-image: url("https://i.imgur.com/JE1Jf2v.jpg");
   max-width: 120rem;
   text-align: center;
 `;
@@ -65,6 +70,7 @@ const WhiteBackground = styled.div`
   text-align: left;
   font-size: 14px;
   padding: 0.5em;
+  background-color: white;
 
   @media (max-width: 768px) {
     font-size: 1em;
@@ -79,6 +85,7 @@ const Creations = styled.div`
   text-align: right;
   font-size: 14px;
   padding: 0.5em;
+  background-color: white;
 
   @media (max-width: 768px) {
     font-size: 1em;
