@@ -54,7 +54,7 @@ const CreationsContainer = styled.div`
   text-align: center;
 
   @media (max-width: 768px) {
-    height: 440px;
+    height: 490px;
   }
 `;
 

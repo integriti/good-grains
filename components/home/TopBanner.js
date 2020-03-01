@@ -26,4 +26,8 @@ const Container = styled.div`
 const Image = styled.img`
   margin: auto 0;
   max-width: 120rem;
+  width: 100%;
+  height: 70rem;
+  object-fit: cover;
+  object-position: 0 0;
 `;

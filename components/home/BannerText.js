@@ -32,7 +32,7 @@ const WhiteBox = styled.div`
   -o-border-radius: 5px;
   border-radius: 5px;
 
-  font-size: 28px;
+  font-size: 24px;
   max-width: 100rem;
 
   @media (max-width: 768px) {

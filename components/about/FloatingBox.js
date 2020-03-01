@@ -150,7 +150,7 @@ const WhiteBoxThree = styled.div`
 
   @media (max-width: 768px) {
     position: absolute;
-    top: 170px;
+    top: 190px;
     left: 12%;
     padding: 1em;
     font-size: 3.5vw;
@@ -180,7 +180,7 @@ const WhiteBoxFour = styled.div`
 
   @media (max-width: 768px) {
     position: absolute;
-    top: 190px;
+    top: 200px;
     right: 10%;
     padding: 1em;
     font-size: 3.5vw;
@@ -210,7 +210,7 @@ const WhiteBoxFive = styled.div`
 
   @media (max-width: 768px) {
     position: absolute;
-    top: 320px;
+    top: 340px;
     left: 7%;
     padding: 1em;
     font-size: 3.5vw;
