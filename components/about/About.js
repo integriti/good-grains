@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import InfoPage from "./InfoPage";
+import FloatingBox from "./FloatingBox";
 
 const About = props => {
   return (
@@ -19,9 +20,9 @@ const About = props => {
       <Creations>
         <h1>Our creations to date...</h1>
       </Creations>
-      <AboutContainer>
-        <InfoPage columns="one" bg="https://i.imgur.com/qkWxSlB.jpg" layout="WhiteBox" text="AboutTextThree" />
-      </AboutContainer>
+      <CreationsContainer>
+        <FloatingBox text="FloatingBoxOne" />
+      </CreationsContainer>
     </>
   );
 };
@@ -33,6 +34,15 @@ const AboutContainer = styled.div`
   width: 100%;
   margin: auto;
   background-image: url("https://i.imgur.com/JE1Jf2v.jpg");
+  max-width: 120rem;
+  text-align: center;
+`;
+
+const CreationsContainer = styled.div`
+  display: flex;
+  width: 100%;
+  margin: auto;
+  background-image: url("https://i.imgur.com/qkWxSlB.jpg");
   max-width: 120rem;
   text-align: center;
 `;

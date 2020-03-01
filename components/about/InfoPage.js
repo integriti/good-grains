@@ -31,13 +31,6 @@ const InfoPage = props => {
                 <WhiteBox dangerouslySetInnerHTML={{ __html: AboutTextTwo }} />
               );
               break;
-            case "AboutTextThree":
-              return (
-                <WhiteBox
-                  dangerouslySetInnerHTML={{ __html: AboutTextThree }}
-                />
-              );
-              break;
           }
         })()}
       </BackgroundContainer>
@@ -52,9 +45,6 @@ const AboutTextOne =
 
 const AboutTextTwo =
   "<p>that there is growing awareness of the need to eat healthy food, exercise regularly and maintain a work-life balance</p><br /><p>Unfortunately statistics indicate that the opposite is true with poor diets leading to rising obesity levels and unhealthy lifestyles due to poor productivity and millions ofl ives lost to non communicable diseases</p>";
-
-const AboutTextThree =
-  "<p><h2>Good Grains</h2><p><br /><p>Gluten free rice protein shaked</p><br /><p>Organic gluten free breakfast range</p>";
 
 const WhiteText = styled.div`
   margin-top: 100px;
