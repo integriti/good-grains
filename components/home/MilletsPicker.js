@@ -7,9 +7,7 @@ const MilletsPicker = () => {
   return (
     <>
       <Container>
-        <Gradient>
-        <BlurbComponent />
-        </Gradient>
+        <Gradient />
         <WideDisplay>
           <Image src="https://i.imgur.com/iA71mhT.png" alt="Foxtail" />;
           <Image src="https://i.imgur.com/5ZX6Ae3.png" alt="Kodo" />;
