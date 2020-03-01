@@ -43,6 +43,11 @@ const WhiteBackground = styled.div`
   max-width: 120rem;
   text-align: left;
   font-size: 14px;
+
+  @media (max-width: 768px) {
+    padding: 1em;
+    font-size: 1em;
+  }
 `;
 
 const Creations = styled.div`
@@ -51,4 +56,9 @@ const Creations = styled.div`
   max-width: 120rem;
   text-align: right;
   font-size: 14px;
+
+  @media (max-width: 768px) {
+    padding: 1em;
+    font-size: 1em;
+  }
 `;

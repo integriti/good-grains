@@ -25,7 +25,7 @@ const CollapseMenu = props => {
             </a>
           </li>
           <li>
-            <a href="/" onClick={props.handleNavbar}>
+            <a href="/about" onClick={props.handleNavbar}>
               About us
             </a>
           </li>
