@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import BannerText from "./BannerText";
-
 const TopBanner = () => {
   return (
     <>
@@ -17,14 +15,12 @@ const TopBanner = () => {
 export default TopBanner;
 
 const Container = styled.div`
-  position: relative;
-  text-align: center;
-  margin: auto;
-  max-width: 120rem;
 `;
 
 const Image = styled.img`
+  position: relative;
+  float: right;
   margin: auto 0;
-  width: 120rem;
-  overflow:hidden;
+  height: 350px;
+  z-index: 9;
 `;
